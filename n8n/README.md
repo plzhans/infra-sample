@@ -6,10 +6,10 @@ n8n은 오픈소스 워크플로우 자동화 도구입니다. 노드 기반의 
 
 ## 항목
 
-| 버전 | 설명 |
-|------|------|
-| [with-postgres](with-postgres/README.md) | PostgreSQL 데이터베이스를 사용하는 구성. 대규모 워크플로우와 높은 동시 실행을 지원하며, 프로덕션 환경 및 팀 사용에 적합합니다. |
-| [with-sqlite](with-sqlite/README.md) | SQLite 데이터베이스를 사용하는 경량 구성. 별도의 데이터베이스 서버가 필요 없으며, 개발 환경 및 소규모 팀 사용에 적합합니다. |
+| 항목 | 설명 | 환경 |
+|------|------|------|
+| with-postgres | PostgreSQL 데이터베이스를 사용하는 구성. 대규모 워크플로우와 높은 동시 실행을 지원하며, 프로덕션 환경 및 팀 사용에 적합합니다. | [docker compose](./with-postgres/docker-compose.yml) |
+| with-sqlite | SQLite 데이터베이스를 사용하는 경량 구성. 별도의 데이터베이스 서버가 필요 없으며, 개발 환경 및 소규모 팀 사용에 적합합니다. | [docker compose](./with-sqlite/docker-compose.yml)| 
 
 ## 선택 가이드
 
