@@ -1,0 +1,23 @@
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: n8n-sqlite
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      # 기본 설정
+      N8N_HOST: localhost
+      N8N_PROTOCOL: http
+      WEBHOOK_URL: http://localhost:5678
+      # 타임존
+      TZ: Asia/Seoul
+      GENERIC_TIMEZONE: Asia/Seoul
+      # 보안
+      N8N_BLOCK_ENV_ACCESS_IN_NODE: true
+      N8N_ENCRYPTION_KEY: ${N8N_ENCRYPTION_KEY:-n8n-default-encryption-key-please-change}
+      # 옵션
+      EXECUTIONS_TIMEOUT: 3600
+      EXECUTIONS_TIMEOUT_MAX: 7200
+    volumes:
+      - ./docker-data/n8n:/home/node/.n8n
